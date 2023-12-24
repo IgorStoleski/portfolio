@@ -1,0 +1,30 @@
+@import "../../../assets/mixin.scss";
+
+footer {
+  @include dFlex(center, center);
+  color: white;
+  width: 100%;
+  border-top: 4px solid #00BEE8;
+}
+
+.container {
+  @include dFlex(space-between, center);
+  width: 100%;
+  max-width: 1440px;
+  height: 291px;
+  flex-shrink: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.social-links {
+    width: 150px;
+    @include dFlex(space-between, center);
+}
+
+.xing {
+    width: 30px;
+}
