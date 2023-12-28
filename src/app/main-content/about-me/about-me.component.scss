@@ -1,0 +1,89 @@
+@import "../../../assets/mixin.scss";
+
+section {
+  @include dFlex(center, center);
+  width: 100%;
+  position: relative;
+  margin-top: 130px;
+  z-index: 3;
+}
+
+.aboutme-left {
+  @include dFlex(center, center);
+  flex-direction: column;
+  position: absolute;
+  width: 471px;
+  left: 102px;
+  gap: 35px;
+
+  > h1 {
+    color: white;
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+  }
+  .aboutme-info-container {
+    @include dFlex(center, center);
+    flex-direction: column;
+    gap: 35px;
+    color: white;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
+  .info-content {
+    @include dFlex(flex-start, flex-start);
+    width: 444px;
+    gap: 35px;
+    .lamp {
+      width: 46px;
+      height: 50px;
+      padding: 0 2px;
+    }
+    .puzzle {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+.abouteme-right {
+  @include dFlex(center, center);
+  position: relative;
+  width: 100%;
+
+  .shadow-aboutme {
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    > img {
+      position: relative;
+      right: -400px;
+    }
+  }
+  .profile-img-container {
+    @include dFlex(center, center);
+    position: absolute;
+    right: 0;
+  }
+  .profile-circle {
+    @include dFlex(center, center);
+
+    .profile-circle-img {      
+      object-position: top;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #00bee8;
+      width: 453px;
+      height: 453px;
+    }
+  }
+
+  .line-to-profile-circle-img {
+    width: 267px;
+    height: 0;
+    border: 2px solid #00bee8;
+  }
+}
