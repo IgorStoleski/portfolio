@@ -3,6 +3,7 @@
 
 section {
   @include dFlex(center, center);
+  flex-direction: column;
   width: 100%;
 }
 
@@ -10,7 +11,6 @@ section {
   display: flex;
   justify-content: space-between;
   width: 100%;
- /*  max-width: $m-width-Desktop; */
 }
 
 .shadow-container {
@@ -146,21 +146,48 @@ section {
   }
 }
 
+.mobile-btn {
+  @include dFlex(center, center);
+  display: none;
+  width: 100%;
+  padding-top: 120px;
+  .contact-btn {
+    @include dFlex(center, center);
+    right: 100px;
+    text-align: center;
+    margin-top: 44px;
+    width: 200px;
+    height: 58px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    background: #00bee8;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: 3;
+    cursor: pointer;
+    &:hover {
+      background: #4b47ff;
+    }
+    > a {
+      text-decoration: none;
+      color: white;
+      font-size: 23px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+    }
+  }
+}
+
+
 .myskill-line {
   width: 58px;
   height: 0px;
   border: 2px solid #4b47ff;
 }
 
-/* @media (max-width: 1920px) {
-  .m-width-container {
-    max-width: $m-width-Desktop;
-  }
-} */
 
 @media (max-width: 1500px) {
   .m-width-container {
-    /* max-width: $m-width-Laptop; */
     flex-direction: column-reverse;
     gap: 35px;
   }
@@ -187,12 +214,13 @@ section {
   .skill-icon-container {
     padding-left: 0;
   }
+  .mobile-btn {
+    display: flex;
+  }
 }
 
+
 @media (max-width: 768px) {
-  .m-width-container {
-    max-width: $m-width-Tablet;
-  }
   .skill-icon-container {
     width: unset;
     flex-wrap: wrap;
@@ -200,6 +228,9 @@ section {
       width: 500px;
       gap: 40px;
     }
+  }
+  .mobile-btn {
+    padding-top: 60px;
   }
 }
 
@@ -222,9 +253,5 @@ section {
     width: 310px;
     gap: 20px;
   }
-  .contact-btn {
-    bottom: -600px;
-    left: 0;
-    transform: translate(-30%, 50%);
-  }
+  
 }

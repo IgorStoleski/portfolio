@@ -2,14 +2,16 @@
 @import "./../../../styles.scss";
 
 section {
-  @include dFlex(center, center);
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: calc(100vh + 102px);
+  height: calc(100vh - 102px);
 }
 
 .m-width {
   @include dFlex(center, end);
   width: 100%;
+  padding-top: 200px
 }
 
 .container {
@@ -42,14 +44,10 @@ section {
   width: 100%;
   height: 40px;
   gap: 42px;
-  position: absolute;
   z-index: 3;
-  bottom: 40px;
   .social-info {
     display: flex;
     align-items: center;
-    position: relative;
-    bottom: 40px;
     gap: 42px;
     .line {
       height: 2px;
@@ -64,26 +62,28 @@ section {
       line-height: 120%;
     }
   }
-  .scroll-down {
+}
+
+.scroll-down {
+  @include dFlex(center, center);
+  position: absolute;
+  right: 40px;
+  bottom: 120px;
+  color: white;
+  z-index: 3;
+  animation: scrollDown 5s infinite;
+  > span {
     @include dFlex(center, center);
-    position: absolute;
-    right: 40px;
-    bottom: 120px;
-    color: white;
-    animation: scrollDown 5s infinite;
-    > span {
-      @include dFlex(center, center);
-      gap: 3px;
-      transform: rotate(90deg);
-      font-size: 23px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 120%;
-      > img {
-        transform: rotate(-90deg);
-        width: 24px;
-        height: 24px;
-      }
+    gap: 3px;
+    transform: rotate(90deg);
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    > img {
+      transform: rotate(-90deg);
+      width: 24px;
+      height: 24px;
     }
   }
 }
@@ -167,7 +167,6 @@ section {
       font-style: normal;
       font-weight: 700;
       line-height: 120%;
-      
     }
     .dev-color {
       color: #4b47ff;
@@ -178,7 +177,6 @@ section {
     }
   }
 }
-
 
 .wave {
   background-image: url("./../../../assets/img/wave/wave.png");
@@ -191,16 +189,10 @@ section {
   z-index: 2;
 }
 
-/* @media (max-width: 1920px) {
-  .m-width {
-    max-width: $m-width-Desktop;
-
-  }
-} */
-
 @media (max-width: 1500px) {
   .m-width {
     max-width: $m-width-Laptop;
+    gap: 50px;
   }
   .headline-info {
     height: unset;
@@ -214,36 +206,58 @@ section {
       width: 310px;
       .name {
         font-size: 45px;
-      }  
+      }
       .dev-color {
         font-size: 29px;
       }
     }
-  }  
+  }
 }
 
 @media (max-width: 1200px) {
   .m-width {
     max-width: $m-width-Tablet;
+    padding-top: 140px;
   }
   .container {
     flex-direction: column;
-    padding-top: 500px;
     .right-side {
       z-index: 3;
+      height: unset;
     }
   }
   .wave {
-    top: 400px;
+    top: 200px;
   }
   .scroll-down {
     display: none !important;
   }
+  .social-info-container {
+    padding-top: 50px;
+  }
 }
 
-@media screen and (min-width: 320px) and (max-width: 1024px), (max-height: 768px) {
+@media (max-width: 1024px) {
+  .left-side .image-container .profile-img {
+    width: 400px;
+  }
+  .left-side .image-container .double-shadow {
+    width: 600px;
+  }
+}
+
+@media only screen and (max-height: 768px) and (orientation: landscape)  {
   .m-width {
-    padding-top: 70px;
+    padding-top: 20px;
+  }
+  .right-side {
+    padding-top: 200px;
+  }
+  .left-side .image-container .profile-img {
+    width: 400px;
+  }
+  .left-side .image-container .double-shadow {
+    width: 600px;
   }
 }
 
@@ -282,10 +296,16 @@ section {
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) {
   .m-width {
     align-items: center;
-    max-width: 300px;
+    padding-top: 100px;
+  }
+  .container .right-side {
+    padding-top: 0;
+  }
+  .social-info-container {
+    padding: 50px 0;
   }
   .headline-contrainer {
     max-width: 300px;

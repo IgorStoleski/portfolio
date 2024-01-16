@@ -159,7 +159,14 @@ aside {
   width: 0;
 }
 
-
+@media only screen and  (max-height: 768px) and (orientation: landscape) {
+  .header-menu {
+    display: none;
+  }
+  .burger-menu {
+    visibility: visible;
+  }
+}
 
 @media screen and (max-width: 1024px) {
   .header-menu {
@@ -174,7 +181,6 @@ aside {
 @media (max-width: 480px) {
   nav {
     padding: 37px 25px;
-    max-width: 295px;
   }
   .burger-menu {
     right: 25px;
