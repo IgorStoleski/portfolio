@@ -1,6 +1,15 @@
 @import "./assets/font.scss";
+@import 'aos/dist/aos.css';
+@import 'animate.css';
 
-* {
+$m-width-Desktop: 1440px;
+$m-width-Laptop: 1200px;
+$m-width-Tablet: 768px;
+$m-width-Mobile: 300px;
+
+
+
+*, *::before, *::after {
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -10,6 +19,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   background-color: #141d2f;
+  overflow-x: hidden;
 }
 
 /* width */
@@ -32,4 +42,17 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 190, 232, 0.8);
+}
+
+#portfolio {
+  scroll-margin-top: 200px;
+}
+
+#about-me {
+  scroll-margin-top: -100px;
+}
+
+#skills {
+  display: flex;
+  scroll-margin-top: -150px;
 }

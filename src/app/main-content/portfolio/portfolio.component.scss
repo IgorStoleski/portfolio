@@ -1,0 +1,114 @@
+@import "../../../styles.scss";
+@import "../../../assets/mixin.scss";
+
+section {
+  @include dFlex(center, center);
+  flex-direction: column;
+  width: 100%;
+}
+
+.portfolio-container {
+  @include dFlex(end, center);
+  /* max-width: $m-width-Desktop; */
+  width: 100%;
+
+  .headline {
+    @include dFlex(center, center);
+    gap: 42px;
+
+    .small-line-left {
+      width: 109px;
+      height: 0px;
+      border: solid 2px #4b47ff;
+    }
+    h2 {
+      color: white;
+      text-align: center;
+      font-size: 90px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+    }
+    .large-line-right {
+      width: 484px;
+      height: 0px;
+      border: solid 2px #4b47ff;
+    }
+  }
+}
+
+h3 {
+  color: white;
+  text-align: center;
+  width: 733px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  margin-top: 35px;
+  margin-bottom: 116px;
+}
+
+@media (max-width: 1920px) {
+  .portfolio-container {
+    /* max-width: $m-width-Desktop; */
+    margin-top: 100px;
+  }
+}
+
+/* @media (max-width: 1500px) {
+  .portfolio-container {
+    max-width: $m-width-Laptop;
+  }
+} */
+
+@media (max-width: 1200px) {
+  .portfolio-container {
+    /* max-width: $m-width-Tablet; */
+    .headline .headline-text {
+      font-size: 70px;
+    }
+    .headline .large-line-right{
+      width: 300px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-container {
+    .headline .small-line-left {
+      width: 50px;
+    }
+    .headline .headline-text {
+      font-size: 45px;
+    }
+    .headline .large-line-right{
+      width: 150px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .portfolio-container {    
+    .headline .small-line-left {
+      width: 20px;
+    }
+    .headline .large-line-right{
+      width: 75px;
+    }
+  }
+  .portfolio-text {
+    width: 310px;
+    height: 59px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-container {
+    max-width: $m-width-Mobile;
+    .headline {
+      gap: 10px;
+    }
+  }
+}

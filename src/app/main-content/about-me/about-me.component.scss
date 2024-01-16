@@ -1,23 +1,41 @@
 @import "../../../assets/mixin.scss";
+@import "./../../../styles.scss";
 
 section {
   @include dFlex(center, center);
   width: 100%;
+  padding-top: 200px;
   position: relative;
-  margin-top: 130px;
   z-index: 3;
+}
+
+.m-width {
+  width: 100%;
+  /* max-width: $m-width-Desktop; */
+  display: flex;
+  justify-content: space-around;
+}
+
+.shadow-aboutme {
+  position: absolute;
+  overflow: hidden;
+  top: -50px;
+  right: 0;
+  > img {
+    position: relative;
+    right: -400px;
+  }
 }
 
 .aboutme-left {
   @include dFlex(center, center);
   flex-direction: column;
-  position: absolute;
-  width: 471px;
-  left: 102px;
+  padding-left: 100px;
   gap: 35px;
 
-  > h1 {
+  > h2 {
     color: white;
+    width: 471px;
     font-size: 90px;
     font-style: normal;
     font-weight: 700;
@@ -51,18 +69,8 @@ section {
 
 .abouteme-right {
   @include dFlex(center, center);
-  position: relative;
   width: 100%;
 
-  .shadow-aboutme {
-    position: absolute;
-    overflow: hidden;
-    right: 0;
-    > img {
-      position: relative;
-      right: -400px;
-    }
-  }
   .profile-img-container {
     @include dFlex(center, center);
     position: absolute;
@@ -71,7 +79,7 @@ section {
   .profile-circle {
     @include dFlex(center, center);
 
-    .profile-circle-img {      
+    .profile-circle-img {
       object-position: top;
       object-fit: cover;
       border-radius: 50%;
@@ -82,8 +90,79 @@ section {
   }
 
   .line-to-profile-circle-img {
-    width: 267px;
+    width: 434px;
     height: 0;
     border: 2px solid #00bee8;
+  }
+}
+
+/* @media (max-width: 1920px) {
+  .m-width {
+    max-width: $m-width-Desktop;
+  }
+} */
+
+@media (max-width: 1500px) {
+  /* .m-width {
+    max-width: $m-width-Laptop;
+  } */
+  .abouteme-right .line-to-profile-circle-img {
+    width: 267px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .m-width {
+    justify-content: center;
+  }
+  .aboutme-left {
+    padding-left: 0;
+    z-index: 4;
+  }
+
+  .abouteme-right {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding-top: 50px;
+  }
+
+  .m-width {
+    max-width: $m-width-Mobile;
+  }
+
+  .aboutme-left {
+    align-items: unset;
+    width: 100%; 
+
+    > h2 {
+      font-size: 45px;
+    }
+  }
+
+  .aboutme-info-container {
+    justify-content: unset;
+    align-items: unset;
+
+    > span {
+      width: 100%; 
+    }
+  }
+
+  .info-content {
+    width: 300px !important;; 
+  }
+
+  .shadow-aboutme {
+    height: 705px;
+    width: 100%; 
+
+    > img {
+      right: -230px;
+      z-index: 3;
+    }
   }
 }

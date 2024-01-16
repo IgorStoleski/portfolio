@@ -1,0 +1,230 @@
+@import "../../../styles.scss";
+@import "../../../assets/mixin.scss";
+
+section {
+  @include dFlex(center, center);
+  width: 100%;
+}
+
+.m-width-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+ /*  max-width: $m-width-Desktop; */
+}
+
+.shadow-container {
+  height: 951px;
+  transform: rotate(-167deg) scaleX(-1);
+  z-index: 2;
+  filter: blur(46.5px);
+  > img {
+    position: absolute;
+    left: -600px;
+    bottom: 400px;
+  }
+}
+
+.skill-icon-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: unset;
+  padding-left: 100px;
+  height: 414px;
+  gap: 54px;
+  z-index: 3;
+
+  .skill-container-section {
+    @include dFlex(flex-start, center);
+    flex-wrap: wrap;
+    width: 721px;
+    height: 100px;
+    gap: 123px;
+  }
+
+  .skill-icons {
+    @include dFlex(flex-end, center);
+    flex-direction: column;
+
+    width: 88px;
+    height: 100px;
+    gap: 10px;
+    > img {
+      display: flex;
+      height: 60px;
+      align-items: flex-start;
+      gap: 10px;
+      &:hover {
+        animation: jumpingIcon 0.5s infinite;
+      }
+    }
+    > span {
+      text-align: center;
+      color: white;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+    }
+  }
+}
+
+@keyframes jumpingIcon {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.myskill-container {
+  @include dFlex(center, center);
+  gap: 50px;
+}
+
+.myskill-container-info {
+  @include dFlex(center, flex-end);
+  flex-direction: column;
+  gap: 34px;
+  .skill-headline {
+    @include dFlex(center, center);
+    gap: 42px;
+    > h2 {
+      color: white;
+      text-align: right;
+      font-size: 90px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%;
+    }
+    .myskill-line-mobile {
+      display: none;
+      width: 58px;
+      height: 0px;
+      border: 2px solid #4b47ff;
+    }
+  }
+  > span {
+    color: white;
+    width: 471px;
+    text-align: right;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
+  .contact-btn {
+    @include dFlex(center, center);
+    position: relative;
+    right: 100px;
+    text-align: center;
+    margin-top: 44px;
+    width: 200px;
+    height: 58px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    background: #00bee8;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    z-index: 3;
+    cursor: pointer;
+    &:hover {
+      background: #4b47ff;
+    }
+    > a {
+      text-decoration: none;
+      color: white;
+      font-size: 23px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+    }
+  }
+}
+
+.myskill-line {
+  width: 58px;
+  height: 0px;
+  border: 2px solid #4b47ff;
+}
+
+/* @media (max-width: 1920px) {
+  .m-width-container {
+    max-width: $m-width-Desktop;
+  }
+} */
+
+@media (max-width: 1500px) {
+  .m-width-container {
+    /* max-width: $m-width-Laptop; */
+    flex-direction: column-reverse;
+    gap: 35px;
+  }
+  .myskill-container {
+    justify-content: flex-end;
+  }
+  .myskill-container-info .skill-headline {
+    gap: 6px;
+    > .myskill-line-mobile {
+      display: flex;
+    }
+  }
+  .myskill-container-info {
+    > span {
+      padding-right: 70px;
+    }
+  }
+  .myskill-line {
+    display: none;
+  }
+  .myskill-container-info .contact-btn {
+    display: none;
+  }
+  .skill-icon-container {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .m-width-container {
+    max-width: $m-width-Tablet;
+  }
+  .skill-icon-container {
+    width: unset;
+    flex-wrap: wrap;
+    .skill-container-section {
+      width: 500px;
+      gap: 40px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .m-width-container {
+    max-width: $m-width-Mobile;
+  }
+  .myskill-container-info {
+    > span {
+      width: 310px;
+      text-align: end;
+    }
+    .skill-headline {
+      > h2 {
+        font-size: 45px;
+      }
+    }
+  }
+  .skill-icon-container .skill-container-section {
+    width: 310px;
+    gap: 20px;
+  }
+  .contact-btn {
+    bottom: -600px;
+    left: 0;
+    transform: translate(-30%, 50%);
+  }
+}

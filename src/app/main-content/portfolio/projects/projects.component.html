@@ -1,0 +1,27 @@
+<section
+  *ngFor="let item of projects; let i = index; let odd = odd"
+  [ngClass]="{ odd: odd }"
+  [attr.data-aos]="odd ? 'fade-left' : 'fade-right'"
+  data-aos-duration="1000"
+  data-aos-offset="300"
+  data-aos-easing="ease-in-sine"
+>
+  <div class="project-img">
+    <img src="./../../../assets/img/projects/{{ projects[i].imgSrc }}" alt="" />
+  </div>
+  <div class="project-info-container">
+    <div class="project-info">
+      <h2>{{ projects[i].title }}</h2>
+      <span class="technologies">{{ projects[i].technologies }}</span>
+      <span class="description">{{ projects[i].description }}</span>
+    </div>
+    <div class="btn-to-links">
+      <div class="live-test">
+        <a target="_blank" href="{{ projects[i].liveTestLink }}">Live test</a>
+      </div>
+      <div class="github-link">
+        <a target="_blank" href="{{ projects[i].githubLink }}">Github</a>
+      </div>
+    </div>
+  </div>
+</section>

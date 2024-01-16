@@ -1,9 +1,18 @@
 @import '../../../assets/mixin.scss';
+@import './../../../styles.scss';
+
+$bar-width: 30px;
+$bar-height: 4px;
+$bar-gap: 6px;
+$burger-height: calc($bar-height * 3 + $bar-gap * 2);
+$animation-timing: 200ms ease-in-out;
+$x-width: calc($burger-height * 1.41421356237);
 
 nav {
   @include dFlex(center, center);
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 99;
   width: 100%;
   padding: 37px 100px;
@@ -18,7 +27,6 @@ nav {
 .container {
   @include dFlex(space-between, center);
   width: 100%;
-  max-width: 1920px;
 }
 
 .header-menu {
@@ -48,5 +56,127 @@ nav {
     &:hover::before {
       transform: scaleX(1);
     }
+  }
+}
+
+aside {
+  display: none !important;
+  @include dFlex(center, center);
+  position: absolute;
+  transition: translate $animation-timing;
+  translate: +100%;
+  z-index: 100;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.burger-menu:has(input:checked) + aside {
+  translate: 0;
+  display: flex !important;
+}
+
+.sidebar {
+  @include dFlex(center, center);
+  flex-direction: column;
+  gap: 30px;
+  > a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+    font-weight: 400;
+    &:hover {
+      color: #00BEE8;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #4B47FF;
+      transform: scaleX(0);
+      transition: transform 0.3s ease-in-out;
+    }
+    &:hover::before {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.burger-menu {
+  visibility: hidden;
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 37px;
+  right: 100px;
+  gap: 6px;
+  width: max-content;
+  cursor: pointer;
+}
+
+.burger-menu::before,
+.burger-menu::after,
+.burger-menu input {
+  content: "";
+  width: $bar-width;
+  height: $bar-height;
+  border-radius: 100px;
+  background-color: white;
+  transform-origin: right center;
+  transition: opacity $animation-timing, width $animation-timing, rotate $animation-timing, translate $animation-timing, background-color $animation-timing;
+}
+
+.burger-menu input{
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+  
+}
+
+.burger-menu:has(input:checked)::before {
+  rotate: -45deg;
+  width: $x-width;
+  translate: 0 calc($bar-height / -2);
+  background-color: #00BEE8;
+}
+
+.burger-menu:has(input:checked)::after {
+  rotate: 45deg;
+  width: $x-width;
+  translate: 0 calc($bar-height / 2);
+  background-color: #00BEE8;
+}
+
+.burger-menu input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .header-menu {
+    display: none;
+  }
+  .burger-menu {
+    visibility: visible;
+  }
+}
+
+
+@media (max-width: 480px) {
+  nav {
+    padding: 37px 25px;
+    max-width: 295px;
+  }
+  .burger-menu {
+    right: 25px;
   }
 }

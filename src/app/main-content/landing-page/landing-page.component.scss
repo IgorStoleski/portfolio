@@ -1,10 +1,15 @@
 @import "../../../assets/mixin.scss";
+@import "./../../../styles.scss";
 
 section {
   @include dFlex(center, center);
   width: 100%;
-  height: 100vh;
-  margin: 100px auto;
+  height: calc(100vh + 102px);
+}
+
+.m-width {
+  @include dFlex(center, end);
+  width: 100%;
 }
 
 .container {
@@ -12,27 +17,24 @@ section {
   width: 100%;
 }
 
+.image-container {
+  @include dFlex(center, center);
+  width: 646px;
+  height: 705px;
+}
+
 .left-side {
   @include dFlex(center, center);
   flex-direction: column;
   position: relative;
   .profile-img {
-    position: absolute;
-    top: -218px;
-    left: 100px;
     width: 600px;
     z-index: 1;
   }
 }
 
-.image {
-  width: 646px;
-  height: 705px;
-  .double-shadow {
-    position: absolute;
-    top: -180px;
-    left: 0;
-  }
+.double-shadow {
+  position: absolute;
 }
 
 .social-info-container {
@@ -41,14 +43,12 @@ section {
   height: 40px;
   gap: 42px;
   position: absolute;
-  left: 0;
-  bottom: 40px;
   z-index: 3;
+  bottom: 40px;
   .social-info {
     display: flex;
     align-items: center;
-    position: absolute;
-    left: 0;
+    position: relative;
     bottom: 40px;
     gap: 42px;
     .line {
@@ -68,7 +68,7 @@ section {
     @include dFlex(center, center);
     position: absolute;
     right: 40px;
-    bottom: 80px;    
+    bottom: 120px;
     color: white;
     animation: scrollDown 5s infinite;
     > span {
@@ -85,7 +85,6 @@ section {
         height: 24px;
       }
     }
-    
   }
 }
 
@@ -111,6 +110,7 @@ section {
 }
 
 .right-side {
+  padding-top: 50px;
   height: 705px;
 }
 
@@ -148,6 +148,7 @@ section {
   height: 172px;
   gap: 35px;
   color: white;
+  z-index: 3;
   .headline-rotate {
     @include dFlex(start, end);
     width: 152px;
@@ -166,10 +167,11 @@ section {
       font-style: normal;
       font-weight: 700;
       line-height: 120%;
+      
     }
     .dev-color {
       color: #4b47ff;
-      font-size: 58px;
+      font-size: 56px;
       font-style: normal;
       font-weight: 400;
       line-height: 120%;
@@ -177,11 +179,241 @@ section {
   }
 }
 
+
 .wave {
-  position: absolute;
-  top: 500px;
-  left: 0;
+  background-image: url("./../../../assets/img/wave/wave.png");
   width: 100%;
-  height: 971px;
+  height: 100%;
+  background-size: cover;
+  left: 0;
+  position: absolute;
+  top: 310px;
   z-index: 2;
 }
+
+/* @media (max-width: 1920px) {
+  .m-width {
+    max-width: $m-width-Desktop;
+
+  }
+} */
+
+@media (max-width: 1500px) {
+  .m-width {
+    max-width: $m-width-Laptop;
+  }
+  .headline-info {
+    height: unset;
+    gap: 10px;
+    .headline-rotate {
+      height: 88px;
+      width: 74px;
+      font-size: 32px;
+    }
+    .headline-text {
+      width: 310px;
+      .name {
+        font-size: 45px;
+      }  
+      .dev-color {
+        font-size: 29px;
+      }
+    }
+  }  
+}
+
+@media (max-width: 1200px) {
+  .m-width {
+    max-width: $m-width-Tablet;
+  }
+  .container {
+    flex-direction: column;
+    padding-top: 500px;
+    .right-side {
+      z-index: 3;
+    }
+  }
+  .wave {
+    top: 400px;
+  }
+  .scroll-down {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1024px), (max-height: 768px) {
+  .m-width {
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-side {
+    padding-top: 0;
+    .image-container {
+      width: unset;
+      height: unset;
+      .double-shadow {
+        width: 500px;
+      }
+      .profile-img {
+        width: 300px;
+      }
+    }
+  }
+  .m-width .container {
+    padding-top: 0;
+  }
+  .right-side {
+    padding-top: 50px;
+    height: 400px;
+  }
+  .wave {
+    top: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .email-contact {
+    display: none;
+  }
+  .double-shadow {
+    width: 480px;
+  }
+}
+
+@media (max-width: 480px) {
+  .m-width {
+    align-items: center;
+    max-width: 300px;
+  }
+  .headline-contrainer {
+    max-width: 300px;
+  }
+  .headline-info {
+    align-items: center;
+  }
+  .headline-info .headline-rotate {
+    width: 61px;
+    height: 50px;
+    font-size: 22px;
+  }
+  .headline-info .headline-text {
+    width: 222px;
+  }
+  .headline-info .headline-text .name {
+    font-size: 35px;
+  }
+  .headline-info .headline-text .dev-color {
+    font-size: 19px;
+  }
+  .left-side .image-container .double-shadow {
+    width: 300px;
+    top: 25px;
+  }
+}
+
+/* @media (max-width: 1920px) {
+  .m-width {
+    max-width: $m-width-Desktop;
+  }
+}
+
+@media (max-width: 1500px) {
+  .m-width {
+    max-width: $m-width-Laptop;
+  }
+  .headline-info {
+    height: unset;
+    gap: 10px;
+    .headline-rotate {
+      height: 88px;
+      width: 74px;
+      font-size: 32px;
+    }
+    .headline-text {
+      width: 310px;
+      .headline-text .name {
+        font-size: 45px;
+      }  
+      .headline-text .dev-color {
+        font-size: 29px;
+      }
+    }
+  }  
+}
+
+@media (max-width: 1200px) {
+  .m-width {
+    max-width: $m-width-Tablet;
+  }
+  .container {
+    flex-direction: column;
+    .right-side {
+      z-index: 3;
+    }
+  }
+  .social-info-container {
+    bottom: -220px;
+  }
+  .wave {
+    width: unset;
+    height: unset;
+  }
+  .scroll-down {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-side {
+    padding-top: 0;
+    .image-container {
+      width: unset;
+      height: unset;
+      .double-shadow {
+        width: 500px;
+      }
+      .profile-img {
+        width: 300px;
+      }
+    }
+  }
+  .right-side {
+    padding-top: 50px;
+    height: 400px;
+  }
+  .wave {
+    top: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .email-contact {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .m-width {
+    align-items: center;
+    max-width: 300px;
+  }
+  .headline-contrainer {
+    max-width: 300px;
+  }
+  .headline-info {
+    align-items: center;
+  }
+  .headline-rotate {
+    width: 61px;
+    height: 50px;
+    font-size: 22px;
+  }
+  .name {
+    font-size: 35px;
+  }
+  .dev-color {
+    font-size: 19px;
+  }
+} */
