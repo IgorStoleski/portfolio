@@ -7,7 +7,7 @@
     data-aos-easing="ease-in-sine"
   >
     <div class="small-line"></div>
-    <h2>Contact</h2>
+    <h2>{{ 'CONTACT.TITLE' | translate }}</h2>
   </div>
   <div class="m-width-container">
     <div class="contact-container">
@@ -18,20 +18,15 @@
         data-aos-duration="1000"
         data-aos-easing="ease-in-sine"
       >
-        <h2 class="contact-headline-text">Got a problem to solve?</h2>
-        <span class="contact-text"
-          >Contact me through this form, I am interested in hearing you, knowing
-          your ideas and contributing to your projects with my work.</span
+        <h2 class="contact-headline-text">{{ 'CONTACT.TEXT' | translate }}</h2>
+        <span class="contact-text">{{ 'CONTACT.TEXT1' | translate }}</span
         >
-        <span class="contact-text"
-          >Need a Fullstack developer?
-          <span class="text-bold">Contact me!</span></span
+        <span class="contact-text">{{ 'CONTACT.TEXT2' | translate }}
+          <span class="text-bold">{{ 'CONTACT.TEXT3' | translate }}</span></span
         >
       </div>
       <form
         (submit)="sendMail()"
-        action="https://formspree.io/f/xyyrypdv"
-        method="POST"
         [formGroup]="form"
         #myForm
         data-aos="fade-left"
@@ -46,13 +41,13 @@
               type="text"
               formControlName="name"
               name="name"
-              placeholder="Your name"
+              placeholder="{{ 'CONTACT.NAMEPH' | translate }}"
               #nameField
               [ngClass]="{ invalid: f['name'].touched && f['name'].invalid }"
             />
             <img
               class="error-img"
-              src="./../../../assets/img/desktop/error.svg"
+              src="./assets/img/desktop/error.svg"
               alt=""
               [ngClass]="{ dBlock: f['name'].touched && f['name'].invalid }"
             />
@@ -62,7 +57,7 @@
                 class="alert"
                 *ngIf="f['name'].errors && f['name'].errors['required']"
               >
-                Name is required.
+              {{ 'CONTACT.NAME' | translate }}
               </span>
             </div>
           </div>
@@ -72,13 +67,13 @@
               type="email"
               formControlName="email"
               name="email"
-              placeholder="Your email"
+              placeholder="{{ 'CONTACT.MAILPH' | translate }}"
               #emailField
               [ngClass]="{ invalid: f['email'].touched && f['email'].invalid }"
             />
             <img
               class="error-img"
-              src="./../../../assets/img/desktop/error.svg"
+              src="./assets/img/desktop/error.svg"
               alt=""
               [ngClass]="{ dBlock: f['email'].touched && f['email'].invalid }"
             />
@@ -88,7 +83,7 @@
                 class="alert"
                 *ngIf="f['email'].errors && f['email'].errors['required']"
               >
-                Email is required.
+              {{ 'CONTACT.MAIL' | translate }}
               </span>
             </div>
           </div>
@@ -98,7 +93,7 @@
               type="text"
               formControlName="message"
               name="message"
-              placeholder="Your message"
+              placeholder="{{ 'CONTACT.MSGPH' | translate }}"
               #messageField
               [ngClass]="{
                 invalid: f['message'].touched && f['message'].invalid
@@ -106,7 +101,7 @@
             ></textarea>
             <img
               class="error-img"
-              src="./../../../assets/img/desktop/error.svg"
+              src="./assets/img/desktop/error.svg"
               alt=""
               [ngClass]="{
                 dBlock: f['message'].touched && f['message'].invalid
@@ -116,8 +111,9 @@
               <span
                 class="alert"
                 *ngIf="f['message'].errors && f['message'].errors['required']"
+                
               >
-                Message is required.
+              {{ 'CONTACT.MSG' | translate }}
               </span>
             </div>
           </div>
@@ -129,10 +125,11 @@
               [ngClass]="getDynamicClass()"
               (click)="isChecked = !isChecked"
             ></div>
-            <span
-              >I've read the <a href="#">privacy policy</a> and agree to the
-              processing of my data as outlined</span
-            >
+            <div class="agree-text-container">
+              <span>{{ 'CONTACT.PRIVACY' | translate }} &nbsp;</span>
+              <a href="imprint">{{ 'CONTACT.LINK' | translate }}</a>
+              <span>&nbsp;{{ 'CONTACT.AGREE' | translate }}</span>
+            </div>
           </div>
           <div class="btn-container">
             <button
@@ -142,39 +139,20 @@
               #sendButton
               [disabled]="!isChecked || !form.valid"
             >
-              Send message
+            {{ 'CONTACT.BTN' | translate }}
             </button>
           </div>
         </div>
       </form>
     </div>
     <div class="up">
-      <a href="#"
-        ><img src="./../../../assets/img/desktop/arrow_up.png" alt=""
-      /></a>
+      <a href="#"><img src="./assets/img/desktop/arrow_up.png" alt="" /></a>
     </div>
   </div>
 </section>
 <ngx-spinner
   bdColor="rgba(0, 0, 0, 0.8)"
-  template="<img class='spinner' src='./../../../assets/img/desktop/letter.gif' />"
+  template="<img class='spinner' src='./assets/img/desktop/letter.gif' />"
   [fullScreen]="true"
-  ><p style="color: white">Sending E-Mail........</p></ngx-spinner
+  ><p style="color: white" >{{ 'CONTACT.SENDMSG' | translate }}</p></ngx-spinner
 >
-
-<!-- <form (submit)="sendMail()" ngNativeValidate #myForm>
-    <div class="text-container">
-        <input required type="text" name="name" placeholder="Your name" #nameField>
-        <input required type="email" name="email" placeholder="Your email" #emailField>
-        <textarea required type="text" name="message" placeholder="Your message" #messageField></textarea>
-    </div>
-    <div class="agree-and-button">
-        <div class="agree-text">
-            <div class="checkbox"  [ngClass]="getDynamicClass()" (click)="isChecked = !isChecked"></div>
-            <span>I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined</span>
-        </div>
-        <div class="btn-container">
-            <button class="send-btn" [ngClass]="getEnabledClass()" #sendButton [disabled]="!isChecked" >Send message</button>
-        </div>
-    </div>
-</form> -->

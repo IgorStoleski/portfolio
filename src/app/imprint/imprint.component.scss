@@ -1,0 +1,28 @@
+@import "../../assets/mixin.scss";
+@import "./../../styles.scss";
+
+section {
+  display: flex;
+  width: 100%;
+  padding: 140px 0 50px 100px;
+}
+
+.impressum {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1024px;
+    padding: 0 20px;
+    color: white;
+    text-align: left;
+}
+
+a {
+    color: #00BEE8;
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        padding: 140px 0 50px 10px;
+    }
+}

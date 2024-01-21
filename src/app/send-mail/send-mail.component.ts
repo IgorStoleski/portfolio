@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-landing-page',
+  selector: 'app-send-mail',
   standalone: true,
   imports: [TranslateModule],
-  templateUrl: './landing-page.component.html',
-  styleUrl: './landing-page.component.scss'
+  templateUrl: './send-mail.component.html',
+  styleUrl: './send-mail.component.scss'
 })
-export class LandingPageComponent {
+export class SendMailComponent {
   constructor(public translate: TranslateService) {}
 
 }

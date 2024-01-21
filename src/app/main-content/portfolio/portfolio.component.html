@@ -1,14 +1,14 @@
 <section>
-  <div
-    class="portfolio-container"
-    data-aos="fade-left"
-    data-aos-duration="1000"
-    data-aos-offset="300"
-    data-aos-easing="ease-in-sine"
-  >
-    <div class="headline">
+  <div class="portfolio-container">
+    <div
+      class="headline"
+      data-aos="fade-left"
+      data-aos-duration="1000"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+    >
       <div class="small-line-left"></div>
-      <h2 class="headline-text">Portfolio</h2>
+      <h2 class="headline-text">{{ 'PORTFOLIO.TITLE' | translate }}</h2>
       <div class="large-line-right"></div>
     </div>
   </div>
@@ -19,7 +19,7 @@
     data-aos-offset="300"
     data-aos-easing="ease-in-sine"
   >
-    This page is a sample of my work - please feel free to try them out.
+  {{ 'PORTFOLIO.TEXT' | translate }}
   </h3>
   <app-projects></app-projects>
 </section>

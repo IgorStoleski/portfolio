@@ -1,5 +1,5 @@
 <div class="shadow-container">
-  <img src="./../../../assets/img/shadows/3_shadow.png" alt="" />
+  <img src="./assets/img/shadows/3_shadow.png" alt="" />
 </div>
 <section>
   <div class="m-width-container">
@@ -16,7 +16,7 @@
           class="skill-icons"
         >
           <img
-            src="./../../../assets/img/desktop/{{ skillIcons1[i].icon }}"
+            src="./assets/img/desktop/{{ skillIcons1[i].icon }}"
             alt=""
           />
           <span>{{ skillIcons1[i].name }}</span>
@@ -32,17 +32,14 @@
     >
       <div class="myskill-container-info">
         <div class="skill-headline">
-          <h2>My skills</h2>
+          <h2>{{ 'SKILLS.TITLE' | translate }}</h2>
           <div class="myskill-line-mobile"></div>
         </div>
-        <span
-          >I have grown my frontend developments skills that have allowed me to
-          create different real projects</span
-        >
-        <div class="contact-btn desktop-btn"><a href="#">Get in touch</a></div>
+        <span>{{ 'SKILLS.TEXT' | translate }}</span>
+        <div class="contact-btn desktop-btn"><a href="#contact">{{ 'SKILLS.BTN' | translate }}</a></div>
       </div>
       <div class="myskill-line"></div>
     </div>
   </div>
-  <div class="mobile-btn"><div class="contact-btn"><a href="#">Get in touch</a></div></div>
+  <div class="mobile-btn"><div class="contact-btn"><a href="#contact">{{ 'SKILLS.BTN' | translate }}</a></div></div>
 </section>

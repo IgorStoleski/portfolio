@@ -1,21 +1,24 @@
 import { NgClass, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [NgFor, NgClass],
+  imports: [NgFor, NgClass, TranslateModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
+
+  constructor(public translate: TranslateService) {}
 
   projects = [
     {
       imgSrc: 'join2.png',
       title: 'Join',
       technologies: 'JavaScript | HTML | CSS',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories',
+      descriptionKey: 'PROJECTS.JOIN',
 
       liveTestLink: 'https://igor-stoleski.developerakademie.net/join/index.html',
       githubLink: 'https://github.com/IgorStoleski',
@@ -24,16 +27,16 @@ export class ProjectsComponent {
       imgSrc: 'epl.png',
       title: 'El pollo loco',
       technologies: 'JavaScript | HTML | CSS',
-      description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the killer chicken',
+      descriptionKey: 'PROJECTS.EPL',
 
       liveTestLink: 'https://igor-stoleski.developerakademie.net/el_pollo_loco/index.html',
-      githubLink: 'https://github.com/IgorStoleski',
+      githubLink: 'https://github.com/IgorStoleski/el_pollo_loco',
     },
     {
       imgSrc: 'join2.png',
       title: 'Join',
       technologies: 'JavaScript | HTML | CSS',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories',
+      descriptionKey: 'PROJECTS.JOIN',
 
       liveTestLink: 'https://igor-stoleski.developerakademie.net/join/index.html',
       githubLink: 'https://github.com/IgorStoleski',
@@ -42,10 +45,10 @@ export class ProjectsComponent {
       imgSrc: 'epl.png',
       title: 'El pollo loco',
       technologies: 'JavaScript | HTML | CSS',
-      description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the killer chicken',
+      descriptionKey: 'PROJECTS.EPL',
 
       liveTestLink: 'https://igor-stoleski.developerakademie.net/el_pollo_loco/index.html',
-      githubLink: 'https://github.com/IgorStoleski',
+      githubLink: 'https://github.com/IgorStoleski/el_pollo_loco',
     },
   ];
 

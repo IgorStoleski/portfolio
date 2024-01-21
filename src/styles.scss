@@ -54,5 +54,15 @@ body {
 
 #skills {
   display: flex;
-  /* scroll-margin-top: 100px; */
+  scroll-margin-top: 100px;
+}
+
+@media screen and (max-width: 480px) {
+  #skills {
+    scroll-margin-top: 35px;
+  }
+  #portfolio{
+    scroll-margin-top: 60px;
+  }
+  
 }

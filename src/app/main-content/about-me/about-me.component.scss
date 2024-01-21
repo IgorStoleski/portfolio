@@ -4,14 +4,15 @@
 section {
   @include dFlex(center, center);
   width: 100%;
-  padding-top: 200px;
+  height: 100vh;
   position: relative;
   z-index: 3;
 }
 
 .m-width {
   width: 100%;
-  /* max-width: $m-width-Desktop; */
+  padding-top: 50px;
+  overflow: hidden;
   display: flex;
   justify-content: space-around;
 }
@@ -21,9 +22,12 @@ section {
   overflow: hidden;
   top: -50px;
   right: 0;
+
   > img {
     position: relative;
-    right: -400px;
+    width: 572px;
+    height: 608px;
+    right: -300px
   }
 }
 
@@ -36,7 +40,7 @@ section {
   > h2 {
     color: white;
     width: 471px;
-    font-size: 90px;
+    font-size: 88px;
     font-style: normal;
     font-weight: 700;
     line-height: 120%;
@@ -44,6 +48,7 @@ section {
   .aboutme-info-container {
     @include dFlex(center, center);
     flex-direction: column;
+    width: 444px;
     gap: 35px;
     color: white;
     font-size: 16px;
@@ -53,7 +58,7 @@ section {
   }
   .info-content {
     @include dFlex(flex-start, flex-start);
-    width: 444px;
+    
     gap: 35px;
     .lamp {
       width: 46px;
@@ -96,22 +101,19 @@ section {
   }
 }
 
-/* @media (max-width: 1920px) {
-  .m-width {
-    max-width: $m-width-Desktop;
-  }
-} */
-
-@media (max-width: 1500px) {
-  /* .m-width {
-    max-width: $m-width-Laptop;
-  } */
+@media screen and (max-width: 1500px) {
   .abouteme-right .line-to-profile-circle-img {
     width: 267px;
   }
 }
 
-@media (max-width: 1200px) {
+@media screen and (max-width: 1345px) {
+  .abouteme-right .line-to-profile-circle-img {
+    width: 190px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
   .m-width {
     justify-content: center;
   }
@@ -125,9 +127,10 @@ section {
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   section {
     padding-top: 100px;
+    height: unset;
   }
 
   .m-width {
@@ -136,33 +139,44 @@ section {
 
   .aboutme-left {
     align-items: unset;
-    width: 100%; 
-
+    width: 100%;
     > h2 {
       font-size: 45px;
     }
   }
 
-  .aboutme-info-container {
+  .aboutme-left .aboutme-info-container {
     justify-content: unset;
     align-items: unset;
-
+    width: unset;
     > span {
-      width: 100%; 
+      width: 100%;
     }
   }
 
   .info-content {
-    width: 300px !important;; 
+    width: 300px !important;
   }
 
   .shadow-aboutme {
     height: 705px;
-    width: 100%; 
+    width: 100%;
 
     > img {
       right: -230px;
       z-index: 3;
     }
+  }
+}
+
+@media only screen and (max-height: 320px) and (orientation: landscape) {
+  section {
+    padding-top: 450px;
+  }
+  .m-width {
+    padding-top: 550px;
+  }
+  .shadow-aboutme {
+    top: 800px;
   }
 }

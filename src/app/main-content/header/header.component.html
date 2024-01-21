@@ -1,20 +1,36 @@
 <nav>
   <div class="container">
-    <span>Igor</span>
+    <img class="logo" href="" src="./assets/img/desktop/logo.png" alt="" />
     <div class="header-menu">
-      <a href="#aboutme">About me</a>
-      <a href="#skills">Skills</a>
-      <a href="#portfolio">Portfolio</a>
+      <a href="#aboutme">{{ "HEADER.ABOUT" | translate }}</a>
+      <a href="#skills">{{ "HEADER.SKILLS" | translate }}</a>
+      <a href="#portfolio">{{ "HEADER.PORTFOLIO" | translate }}</a>
+      <div (click)="toggleDropdown()" class="dropdown">
+        <div class="dropbtn">{{ "HEADER.LANGUAGE" | translate }}</div>
+        <div
+          *ngIf="isDropdownOpen"
+          class="dropdown-content"
+          [ngClass]="{ show: isDropdownOpen }"
+        >
+          <a (click)="changeLanguage('de')">DE</a>
+          <a (click)="changeLanguage('en')">EN</a>
+        </div>
+      </div>
     </div>
   </div>
 </nav>
 <label class="burger-menu">
-  <input type="checkbox">
+  <input id="menu-input" type="checkbox" />
 </label>
-<aside>
-  <div  class="sidebar">
-    <a href="#aboutme">About me</a>
-    <a href="#skills">Skills</a>
-    <a href="#portfolio">Portfolio</a>
+<aside id="siede-menu">
+  <div class="sidebar">
+    <a href="#aboutme">{{ "HEADER.ABOUT" | translate }}</a>
+    <a href="#skills">{{ "HEADER.SKILLS" | translate }}</a>
+    <a href="#portfolio">{{ "HEADER.PORTFOLIO" | translate }}</a>
+    <div class="language-container">
+      <a class="language" (click)="changeLanguage('de')">DE</a>
+      <span>|</span>
+      <a class="language" (click)="changeLanguage('en')">EN</a>
+    </div>
   </div>
 </aside>

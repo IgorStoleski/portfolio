@@ -1,17 +1,25 @@
 <footer>
-    <div class="container">
-        <div>
-            <div>
-                <div>Igor</div>
-                <a class="desktop-imprint" href="imprint">Imprint</a>
-            </div>
-        </div>
-        <div>&#169; Igor Stoleski 2024 </div>
-        <div class="social-links">
-            <a href=""><img src="./../../../assets/img/desktop/github.svg" alt=""></a>
-            <a href=""><img src="./../../../assets/img/desktop/linkedin.svg" alt=""></a>
-            <a href=""><img class="xing" src="./../../../assets/img/desktop/xing.svg" alt=""></a>
-        </div>
+  <div class="container">
+    <div class="logo-container">
+      <img class="logo" href="" src="./assets/img/desktop/logo.png" alt="" />
+      <a class="desktop-imprint" href="imprint">{{
+        "FOOTER.IMPRINT" | translate
+      }}</a>
     </div>
-    <div class="mobile-imprint"><a href="imprint">Imprint</a></div>
+    <div>&#169; Igor Stoleski 2024</div>
+    <div class="social-links">
+      <a href="https://github.com/IgorStoleski"
+        ><img src="./assets/img/desktop/github.svg" alt=""
+      /></a>
+      <a href="https://www.linkedin.com/in/igor-stoleski-5419a01a5/"
+        ><img src="./assets/img/desktop/linkedin.svg" alt=""
+      /></a>
+      <a href="https://www.xing.com/profile/Igor_Stoleski/web_profiles"
+        ><img class="xing" src="./assets/img/desktop/xing.svg" alt=""
+      /></a>
+    </div>
+  </div>
+  <div class="mobile-imprint">
+    <a href="imprint">{{ "FOOTER.IMPRINT" | translate }}</a>
+  </div>
 </footer>

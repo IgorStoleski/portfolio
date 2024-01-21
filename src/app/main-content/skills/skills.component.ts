@@ -1,17 +1,18 @@
 import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor, TranslateModule],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
 
 
-  constructor() { }
+  constructor(public translate: TranslateService) {}
 
   ngOnInit(): void {
   }

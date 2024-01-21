@@ -5,11 +5,12 @@ section {
   @include dFlex(center, center);
   flex-direction: column;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .portfolio-container {
   @include dFlex(end, center);
-  /* max-width: $m-width-Desktop; */
+  overflow: hidden;
   width: 100%;
 
   .headline {
@@ -69,7 +70,7 @@ h3 {
       font-size: 70px;
     }
     .headline .large-line-right{
-      width: 300px;
+      width: 200px;
     }
   }
 }

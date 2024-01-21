@@ -1,0 +1,14 @@
+@import "../../assets/mixin.scss";
+@import "./../../styles.scss";
+
+section {
+  @include dFlex(center, center);
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh + 102px - 398px);
+  gap: 24px;
+  h2 {
+    color: white;
+    text-align: center;
+  }
+}

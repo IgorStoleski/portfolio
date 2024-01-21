@@ -5,6 +5,7 @@ section {
   @include dFlex(center, center);
   width: 100%;
   margin-bottom: 150px;
+  overflow: hidden;
 }
 
 .project-img {
@@ -19,7 +20,6 @@ section {
   @include dFlex(flex-end, flex-start);
   flex-direction: column;
   height: 340px;
-  width: 513px;
   gap: 35px;
 }
 
@@ -115,19 +115,19 @@ section {
   }
 }
 
-@media (max-width: 1920px) {
+@media screen and (max-width: 1920px) {
   section {
     max-width: $m-width-Desktop;
   }
 }
 
-@media (max-width: 1500px) {
+@media screen and (max-width: 1500px) {
   section {
     max-width: $m-width-Laptop;
   }
 }
 
-@media (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
   section {
     max-width: $m-width-Tablet;
     flex-direction: column;
@@ -158,16 +158,41 @@ section {
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 815px) {
+  section {
+    .project-img {
+      width: 400px;
+      height: 300px;
+      > img {
+        width: 400px;
+        height: 300px;
+      }
+    }
+  }
+  .project-info .description {
+    width: 400px;
+  }
+  .projekt-info-container {
+    width: 400px;
+    height: 500px;
+  }
+  .btn-to-links {
+    gap: 6px;
+  }
+  .odd {
+    .btn-to-links {
+      gap: 6px;
+    }
+  }
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
   section {
     max-width: $m-width-Tablet;
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   section {
     max-width: $m-width-Mobile;
     .project-img {

@@ -1,0 +1,57 @@
+{
+	"HEADER": {
+		"ABOUT": "Aboute me",
+		"SKILLS": "Skills",
+		"PORTFOLIO": "Portfolio",
+		"LANGUAGE": "Language"
+	},
+	"PAGE": {
+		"IAM": "I am",
+		"DEV": "FULLSTACK DEVELOPER",
+		"TALK": "Let's talk",
+		"SCROLL": "Scroll down"
+	},
+	"ABOUT": {
+		"TITLE": "About me",
+		"TEXT": "Hello, I am a full stack developer from Plochingen, Germany. My expertise includes front-end design using HTML, CSS and JavaScript, as well as building robust back-end systems using Django, Python and SQL - a combination that allows me to develop versatile and efficient web applications from scratch.",
+		"TEXT1": "My personal philosophy and motto \"There is always a way to a solution\" guides me in every project I take on. I believe that persistence and patience combined with technical know-how and creative thinking are the key to successful code and successful projects.",
+		"TEXT2": "In order to balance my professional work, I keep myself fit and healthy through regular exercise. This discipline and perseverance also flow into my professional ethics: There is a solution to every problem, and I am willing to invest the time necessary to find it."
+	},
+	"SKILLS": {
+		"TITLE": "My skills",
+		"TEXT": "I have grown my fullstack developments skills that have allowed me to create different real projects",
+		"BTN": "Get in touch"	
+	},
+	"PORTFOLIO": {
+		"TITLE": "Portfolio",
+		"TEXT": "This page is a sample of my work - please feel free to try them out."
+	},
+	"PROJECTS": {
+		"JOIN": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories",
+		"EPL": "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the killer chicken"
+	},
+	"CONTACT": {
+		"TITLE": "Contact",
+		"TEXT": "Got a problem to solve?",
+		"TEXT1": "Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.",
+		"TEXT2": "Need a Fullstack developer?",
+		"TEXT3": "Contact me!",
+		"NAME": "Name is required.",
+		"NAMEPH":"Your name",
+		"MAIL": "Email is required.",
+		"MAILPH":"Your email",
+		"MSG": "Message is required.",
+		"MSGPH":"Your message",
+		"PRIVACY": "I've read the",
+		"LINK": "privacy policy",
+		"AGREE": "and agree to the processing of my data as outlined",
+		"BTN": "Send message",
+		"SENDMSG": "Sending E-Mail........",
+		"SUCCESS": "Thank you for your message!",
+		"SUCCESS2": "Your E-Mail was sent successfully"
+	},
+	"FOOTER": {
+		"IMPRINT": "Imprint"
+	}	
+}
+

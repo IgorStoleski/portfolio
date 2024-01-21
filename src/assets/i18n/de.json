@@ -1,0 +1,56 @@
+{
+	"HEADER": {
+		"ABOUT": "Über mich",
+		"SKILLS": "Fähigkeiten",
+		"PORTFOLIO": "Portfolio",
+		"LANGUAGE": "Sprache"
+	},
+	"PAGE": {
+		"IAM": "Ich bin",
+		"DEV": "FULLSTACK ENTWICKLER",
+		"TALK": "Kontakt",
+		"SCROLL": "Nach unten scrollen"
+	},
+	"ABOUT": {
+		"TITLE": "Über mich",
+		"TEXT": "Hallo, ich bin ein Fullstack-Entwickler aus Plochingen, Deutschland. Meine Expertise umfasst die Frontend-Gestaltung mit HTML, CSS und JavaScript sowie die Erstellung robuster Backend-Systeme mit Django, Python und SQL eine Kombination, die es mir ermöglicht, vielseitige und effiziente Webanwendungen von Grund auf zu entwickeln.",
+		"TEXT1": "Meine persönliche Philosophie und mein Motto \"Es gibt immer einen Weg zur Lösung\" leitet mich in jedem Projekt, das ich übernehme. Ich bin überzeugt, dass Beharrlichkeit und Geduld in Verbindung mit technischem Know-how und kreativem Denken der Schlüssel zu erfolgreichem Code und erfolgreichen Projekten sind.",
+		"TEXT2": "Um einen Ausgleich zu meiner beruflichen Tätigkeit zu schaffen, halte ich mich durch regelmäßigen Sport fit und gesund. Diese Disziplin und Ausdauer fließen auch in meine berufliche Ethik ein: Für jedes Problem gibt es eine Lösung, und ich bin bereit, die Zeit zu investieren, die nötig ist, um diese zu finden."
+	},
+	"SKILLS": {
+		"TITLE": "Fähigkeiten",
+		"TEXT": "Ich habe meine Fähigkeiten im Fullstack-Entwicklungsbereich erweitert, was es mir ermöglicht hat, verschiedene echte Projekte zu erstellen",
+		"BTN": "Kontakt"	
+	},
+	"PORTFOLIO": {
+		"TITLE": "Portfolio",
+		"TEXT": "Diese Seite zeigt eine Auswahl meiner Arbeiten - bitte probieren Sie sie aus."
+	},
+	"PROJECTS": {
+		"JOIN": "Vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
+		"EPL": "Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Salsaflaschen zu finden, um gegen das Killerhuhn zu kämpfen."
+	},
+	"CONTACT": {
+		"TITLE": "Kontakt",
+		"TEXT": "Ein Problem zu lösen?",
+		"TEXT1": "Kontaktieren Sie mich über dieses Formular. Ich interessiere mich dafür, von Ihnen zu hören, Ihre Ideen kennenzulernen und zu Ihren Projekten beizutragen.",
+		"TEXT2": "Brauchen Sie einen Fullstack-Entwickler?",
+		"TEXT3": "Kontaktiere mich!",
+		"NAME": "Name ist erforderlich.",
+		"NAMEPH": "Dein Name",
+		"MAIL": "E-Mail ist erforderlich.",
+		"MAILPH": "Deine E-Mail",
+		"MSG": "Nachricht ist erforderlich.",
+		"MSGPH": "Deine Nachricht",
+		"PRIVACY": "Ich habe die",
+		"LINK": "Datenschutzerklärung",
+		"AGREE": "gelesen und stimme der Verarbeitung meiner Daten gemäß den Bestimmungen zu",
+		"BTN": "Nachricht senden",
+		"SENDMSG": "Sende E-Mail........",
+		"SUCCESS": "Vielen Dank für Ihre Nachricht!",
+		"SUCCESS2": "Ihre E-Mail wurde erfolgreich versendet"
+	},
+	"FOOTER": {
+		"IMPRINT": "Impressum"
+	}	
+}

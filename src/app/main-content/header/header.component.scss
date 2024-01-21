@@ -1,5 +1,5 @@
-@import '../../../assets/mixin.scss';
-@import './../../../styles.scss';
+@import "../../../assets/mixin.scss";
+@import "./../../../styles.scss";
 
 $bar-width: 30px;
 $bar-height: 4px;
@@ -15,18 +15,31 @@ nav {
   left: 0;
   z-index: 99;
   width: 100%;
-  padding: 37px 100px;
-  background-color: #141D2F;
+  background-color: #141d2f;
   font-weight: 500;
   color: white;
   font-size: 23px;
-  font-style: normal;  
+  font-style: normal;
   line-height: 120%;
+  box-shadow: 0px 5px 12px 5px rgba(0, 0, 0, 0.39);
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .container {
   @include dFlex(space-between, center);
   width: 100%;
+  padding: 23px 100px;
+  > span > a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+  }
 }
 
 .header-menu {
@@ -34,22 +47,23 @@ nav {
   justify-content: center;
   align-items: flex-start;
   gap: 29px;
-  > a {
+  > a,
+  .dropbtn {
     position: relative;
     color: white;
     text-decoration: none;
     font-weight: 400;
     &:hover {
-      color: #00BEE8;
+      color: #00bee8;
     }
-    &::before{
-      content: '';
+    &::before {
+      content: "";
       position: absolute;
       bottom: -5px;
       left: 0;
       width: 100%;
       height: 2px;
-      background-color: #4B47FF;
+      background-color: #4b47ff;
       transform: scaleX(0);
       transition: transform 0.3s ease-in-out;
     }
@@ -59,44 +73,91 @@ nav {
   }
 }
 
-aside {
-  display: none !important;
-  @include dFlex(center, center);
+.dropdown-content a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  width: 115px;
+  text-align: center;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: #00bee8;
+    color: #4b47ff;
+  }
+}
+
+.dropdown {
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
   position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #141d2f;
+  box-shadow: 0px 15px 16px 3px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 8px 0px;
+}
+
+.show {
+  display: flex !important;
+}
+
+aside {
+  visibility: hidden;
+  @include dFlex(center, center);
+  position: fixed;
   transition: translate $animation-timing;
   translate: +100%;
   z-index: 100;
   width: 100%;
-  min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .burger-menu:has(input:checked) + aside {
   translate: 0;
-  display: flex !important;
+  visibility: visible;
+}
+
+.burger-menu:has(input:checked):not(:checked) + .sidebar a:focus {
+  visibility: hidden;
 }
 
 .sidebar {
   @include dFlex(center, center);
   flex-direction: column;
   gap: 30px;
-  > a {
+  > a,
+  .language {
     position: relative;
     color: white;
     text-decoration: none;
     font-size: 32px;
     font-weight: 400;
+    cursor: pointer;
     &:hover {
-      color: #00BEE8;
+      color: #00bee8;
     }
-    &::before{
-      content: '';
+    &::before {
+      content: "";
       position: absolute;
       bottom: -5px;
       left: 0;
       width: 100%;
       height: 2px;
-      background-color: #4B47FF;
+      background-color: #4b47ff;
       transform: scaleX(0);
       transition: transform 0.3s ease-in-out;
     }
@@ -104,6 +165,14 @@ aside {
       transform: scaleX(1);
     }
   }
+}
+
+.language-container {
+  display: flex;
+  gap: 8px;
+  color: white;
+  font-size: 32px;
+  font-weight: 400;
 }
 
 .burger-menu {
@@ -128,30 +197,31 @@ aside {
   border-radius: 100px;
   background-color: white;
   transform-origin: right center;
-  transition: opacity $animation-timing, width $animation-timing, rotate $animation-timing, translate $animation-timing, background-color $animation-timing;
+  transition: opacity $animation-timing, width $animation-timing,
+    rotate $animation-timing, translate $animation-timing,
+    background-color $animation-timing;
 }
 
-.burger-menu input{
+.burger-menu input {
   appearance: none;
   padding: 0;
   margin: 0;
   outline: none;
   pointer-events: none;
-  
 }
 
 .burger-menu:has(input:checked)::before {
   rotate: -45deg;
   width: $x-width;
   translate: 0 calc($bar-height / -2);
-  background-color: #00BEE8;
+  background-color: #00bee8;
 }
 
 .burger-menu:has(input:checked)::after {
   rotate: 45deg;
   width: $x-width;
   translate: 0 calc($bar-height / 2);
-  background-color: #00BEE8;
+  background-color: #00bee8;
 }
 
 .burger-menu input:checked {
@@ -159,12 +229,25 @@ aside {
   width: 0;
 }
 
-@media only screen and  (max-height: 768px) and (orientation: landscape) {
+@media screen and (max-height: 768px) and (orientation: landscape) {
   .header-menu {
     display: none;
   }
   .burger-menu {
     visibility: visible;
+  }
+}
+
+@media screen and (max-height: 320px) and (orientation: landscape) {
+  .container {
+    padding: 37px 25px;
+  }
+  .header-menu {
+    display: none;
+  }
+  .burger-menu {
+    visibility: visible;
+    right: 25px;
   }
 }
 
@@ -177,12 +260,12 @@ aside {
   }
 }
 
-
-@media (max-width: 480px) {
-  nav {
-    padding: 37px 25px;
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 6px 25px;
   }
   .burger-menu {
     right: 25px;
+    top: 20px;
   }
 }

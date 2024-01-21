@@ -6,12 +6,13 @@ section {
   @include dFlex(center, center);
   flex-direction: column;
   width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .headline-contact {
   @include dFlex(start, center);
   width: 100%;
-  /* max-width: $m-width-Desktop; */
   gap: 50px;
   .small-line {
     width: 50px;
@@ -33,7 +34,6 @@ section {
 .contact-container {
   @include dFlex(space-around, unset);
   width: 100%;
-  /* max-width: $m-width-Desktop; */
   margin-top: 85px;
   gap: 151px;
 
@@ -42,7 +42,6 @@ section {
     flex-direction: column;
     gap: 35px;
     h2 {
-      width: 473px;
       color: white;
       font-size: 32px;
       font-style: normal;
@@ -129,15 +128,17 @@ section {
 
   .agree-and-button {
     margin-top: 16px;
+    width: 616px;
     .agree-text {
       display: flex;
       align-items: center;
       height: 27px;
-      gap: 8px;
+      gap: 13px;
       align-self: stretch;
       .checkbox {
-        width: 24px;
+        width: 34px;
         height: 24px;
+        background-repeat: no-repeat;
         cursor: pointer;
       }
       .unchecked {
@@ -146,15 +147,14 @@ section {
       .checked {
         background-image: url("./../../../assets/img/desktop/ischecked.svg");
       }
-      > span {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        color: white;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 120%;
+      .agree-text-container {
+        > span {
+          color: white;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 120%;
+        }
         > a {
           text-decoration: none;
           color: #4b47ff;
@@ -212,26 +212,14 @@ section {
   display: block !important;
 }
 
-/* @media (max-width: 1920px) {
-  .m-width-container {
-    max-width: $m-width-Desktop;
-  }
-} */
-
-/* @media (max-width: 1500px) {
-  .m-width-container {
-    max-width: $m-width-Laptop;
-  }
-} */
-
-@media (max-width: 1300px) {
+@media screen and (max-width: 1300px) {
   .m-width-container .contact-container {
     flex-direction: column;
     gap: 45px;
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .m-width-container {
     max-width: 470px;
   }
@@ -257,19 +245,28 @@ section {
     width: 100%;
     max-width: 470px;
   }
+  .contact-container .agree-and-button{
+    width: 470px;
+  }
+  .contact-container .agree-and-button .agree-text .checkbox {
+    width: 44px;
+  }
   .agree-and-button .btn-container {
     width: unset !important;
   }
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
+  section {
+    height: unset;
+  }
   .m-width-container {
     max-width: $m-width-Mobile;
     .contact-info .contact-headline-text {
       font-size: 23px;
     }
   }
-  .contact-info .contact-text{
+  .contact-info .contact-text {
     width: 100%;
     max-width: 310px;
     word-break: break-all;
@@ -278,6 +275,16 @@ section {
   .text-container .input-field .input-textarea {
     width: 100%;
     max-width: 310px;
+  }
+  .contact-container .agree-and-button .agree-text {
+    height: 62px;
+    font-size: 12px;
+  }
+  .contact-container .agree-and-button{
+    width: 300px;
+  }
+  .contact-container .agree-and-button .agree-text .checkbox {
+    width: 72px;
   }
   .alert {
     width: 100%;
