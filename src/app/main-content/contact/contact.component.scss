@@ -10,6 +10,11 @@ section {
   overflow: hidden;
 }
 
+.m-width-container{
+  width: 100%;
+  padding: 0 100px;
+}
+
 .headline-contact {
   @include dFlex(start, center);
   width: 100%;
@@ -31,8 +36,13 @@ section {
   }
 }
 
+form {
+  @include dFlex(center, center);
+  flex-direction: column;
+}
+
 .contact-container {
-  @include dFlex(space-around, unset);
+  @include dFlex(space-between, unset);
   width: 100%;
   margin-top: 85px;
   gap: 151px;
@@ -222,6 +232,7 @@ section {
 @media screen and (max-width: 768px) {
   .m-width-container {
     max-width: 470px;
+    padding: 0;
   }
   .headline-contact {
     gap: 6px;

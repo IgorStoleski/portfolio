@@ -2,11 +2,11 @@
 
 
 section {
-    /* @include dFlex(center, center); */
-    display: flex;
+    @include dFlex(center, center);
     flex-direction: column;
     .w100 {
         width: 100%;
     }
     
 }
+

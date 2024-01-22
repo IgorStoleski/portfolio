@@ -18,14 +18,14 @@ section {
 .shadow-container {
   position: absolute;
   height: 951px;
-  
+
   z-index: 2;
   filter: blur(46.5px);
   > img {
     position: absolute;
-    transform: rotate(-167deg) scaleX(-1);
-    left: -700px;
-    bottom: -200px;
+    transform: rotate(-269deg) scaleX(-1);
+    left: -155px;
+    bottom: -100px;
   }
 }
 
@@ -183,13 +183,11 @@ section {
   }
 }
 
-
 .myskill-line {
   width: 58px;
   height: 0px;
   border: 2px solid #4b47ff;
 }
-
 
 @media screen and (max-width: 1500px) {
   .m-width-container {
@@ -256,6 +254,7 @@ section {
     }
   }
   .shadow-container {
+    overflow: hidden;
     width: 100px;
   }
   .skill-icon-container .skill-container-section {
@@ -265,5 +264,6 @@ section {
   .myskill-container .myskill-container-info .skill-headline > h2 {
     font-size: 37px;
   }
-  
 }
+
+

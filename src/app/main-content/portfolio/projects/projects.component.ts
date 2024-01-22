@@ -20,7 +20,7 @@ export class ProjectsComponent {
       technologies: 'JavaScript | HTML | CSS',
       descriptionKey: 'PROJECTS.JOIN',
 
-      liveTestLink: 'https://igor-stoleski.developerakademie.net/join/index.html',
+      liveTestLink: 'https://join.igor-stoleski.de/',
       githubLink: 'https://github.com/IgorStoleski',
     },
     {
@@ -29,7 +29,7 @@ export class ProjectsComponent {
       technologies: 'JavaScript | HTML | CSS',
       descriptionKey: 'PROJECTS.EPL',
 
-      liveTestLink: 'https://igor-stoleski.developerakademie.net/el_pollo_loco/index.html',
+      liveTestLink: 'https://el-pollo-loco.igor-stoleski.de/',
       githubLink: 'https://github.com/IgorStoleski/el_pollo_loco',
     },
     {
@@ -38,7 +38,7 @@ export class ProjectsComponent {
       technologies: 'JavaScript | HTML | CSS',
       descriptionKey: 'PROJECTS.JOIN',
 
-      liveTestLink: 'https://igor-stoleski.developerakademie.net/join/index.html',
+      liveTestLink: 'https://join.igor-stoleski.de/',
       githubLink: 'https://github.com/IgorStoleski',
     },
     {
@@ -47,7 +47,7 @@ export class ProjectsComponent {
       technologies: 'JavaScript | HTML | CSS',
       descriptionKey: 'PROJECTS.EPL',
 
-      liveTestLink: 'https://igor-stoleski.developerakademie.net/el_pollo_loco/index.html',
+      liveTestLink: 'https://el-pollo-loco.igor-stoleski.de/',
       githubLink: 'https://github.com/IgorStoleski/el_pollo_loco',
     },
   ];

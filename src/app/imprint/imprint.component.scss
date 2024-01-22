@@ -26,3 +26,9 @@ a {
         padding: 140px 0 50px 10px;
     }
 }
+@media screen and (min-width: 1921px) {
+    section {
+      padding-left: max(160px, calc(50% - 960px));
+      padding-right: max(160px, calc(50% - 960px));
+    }
+  }
