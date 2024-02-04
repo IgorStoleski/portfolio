@@ -21,7 +21,7 @@ export class ProjectsComponent {
       descriptionKey: 'PROJECTS.JOIN',
 
       liveTestLink: 'https://join.igor-stoleski.de/',
-      githubLink: 'https://github.com/IgorStoleski',
+      githubLink: 'https://github.com/IgorStoleski/join',
     },
     {
       imgSrc: 'epl.png',
@@ -31,25 +31,7 @@ export class ProjectsComponent {
 
       liveTestLink: 'https://el-pollo-loco.igor-stoleski.de/',
       githubLink: 'https://github.com/IgorStoleski/el_pollo_loco',
-    },
-    {
-      imgSrc: 'join2.png',
-      title: 'Join',
-      technologies: 'JavaScript | HTML | CSS',
-      descriptionKey: 'PROJECTS.JOIN',
-
-      liveTestLink: 'https://join.igor-stoleski.de/',
-      githubLink: 'https://github.com/IgorStoleski',
-    },
-    {
-      imgSrc: 'epl.png',
-      title: 'El pollo loco',
-      technologies: 'JavaScript | HTML | CSS',
-      descriptionKey: 'PROJECTS.EPL',
-
-      liveTestLink: 'https://el-pollo-loco.igor-stoleski.de/',
-      githubLink: 'https://github.com/IgorStoleski/el_pollo_loco',
-    },
+    }
   ];
 
 

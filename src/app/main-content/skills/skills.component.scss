@@ -245,12 +245,13 @@ section {
     padding-top: 100px;
   }
   .m-width-container {
-    max-width: $m-width-Mobile;
+    max-width: 310px;
   }
   .myskill-container-info {
     > span {
       width: 310px;
       text-align: end;
+      padding-right: 45px;
     }
   }
   .shadow-container {
@@ -263,6 +264,9 @@ section {
   }
   .myskill-container .myskill-container-info .skill-headline > h2 {
     font-size: 37px;
+  }
+  .myskill-container-info .skill-headline .myskill-line-mobile {
+    width: 40px;
   }
 }
 

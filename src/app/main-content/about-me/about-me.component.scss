@@ -185,4 +185,10 @@ section {
   .shadow-aboutme {
     overflow: visible;
   }
+  .shadow-aboutme {
+  
+    > img {
+      right: -150px
+    }
+  }
 }
