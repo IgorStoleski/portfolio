@@ -31,6 +31,15 @@ export class ProjectsComponent {
 
       liveTestLink: 'https://el-pollo-loco.igor-stoleski.de/',
       githubLink: 'https://github.com/IgorStoleski/el_pollo_loco',
+    },
+    {
+      imgSrc: 'pokedex2.png',
+      title: 'Pokedex',
+      technologies: 'JavaScript | HTML | CSS | Api',
+      descriptionKey: 'PROJECTS.POKEDEX',
+
+      liveTestLink: 'https://pokedex.igor-stoleski.de/',
+      githubLink: 'https://github.com/IgorStoleski/pokedex',
     }
   ];
 
