@@ -29,7 +29,7 @@
 	"PROJECTS": {
 		"JOIN": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories",
 		"EPL": "A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and salsa bottles to fight against the killer chicken",
-		"POKEDEX": "Based on the PokéAPI a simple library that provides and catalogues pokemon information."
+		"VIDEOFLIX": "A simple video streaming app based on a REST API. The frontend was created with Angular and the backend with Django"
 	},
 	"CONTACT": {
 		"TITLE": "Contact",

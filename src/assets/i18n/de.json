@@ -29,7 +29,7 @@
 	"PROJECTS": {
 		"JOIN": "Vom Kanban-System inspirierter Aufgabenmanager. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.",
 		"EPL": "Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Salsaflaschen zu finden, um gegen das Killerhuhn zu kämpfen.",
-		"POKEDEX": "Basierend auf der PokéAPI, einer einfachen Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
+		"VIDEOFLIX": "Eine einfache Video-Streaming-App, die auf einer REST-API basiert. Das Frontend wurde mit Angular erstellt und das Backend mit Django."
 	},
 	"CONTACT": {
 		"TITLE": "Kontakt",

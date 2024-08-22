@@ -58,39 +58,34 @@ export class SkillsComponent {
     {
       icon: 'material.svg',
       name: 'Material design'
-    }
+    },
+    {
+      icon: 'linux2.png',
+      name: 'Linux'
+    },
+    {
+      icon: 'python.png',
+      name: 'Python'
+    },
+    {
+      icon: 'django.png',
+      name: 'Django'
+    },
+    {
+      icon: 'redis.png',
+      name: 'Redis'
+    },
+    {
+      icon: 'postgreSQL.png',
+      name: 'PostgreSQL'
+    },
+    {
+      icon: 'sql.png',
+      name: 'SQL'
+    },
+    {
+      icon: 'cloud.png',
+      name: 'Cloud'
+    },
   ];
-/* 
-  skillIcons2 = [
-    {
-      icon: 'Firebase.svg',
-      name: 'Firebase'
-    },
-    {
-      icon: 'git.svg',
-      name: 'GIT'
-    },
-    {
-      icon: 'css.svg',
-      name: 'CSS'
-    },
-    {
-      icon: 'Api.svg',
-      name: 'Resp-API'
-    }
-  ];
-
-  skillIcons3 = [
-    {
-      icon: 'scrum.svg',
-      name: 'Scrum'
-    },
-    {
-      icon: 'material.svg',
-      name: 'Material design'
-    }
-  ]; */
-
-
-
 }

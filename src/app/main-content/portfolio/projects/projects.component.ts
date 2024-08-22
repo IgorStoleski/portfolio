@@ -33,13 +33,13 @@ export class ProjectsComponent {
       githubLink: 'https://github.com/IgorStoleski/el_pollo_loco',
     },
     {
-      imgSrc: 'pokedex2.png',
-      title: 'Pokedex',
-      technologies: 'JavaScript | HTML | CSS | Api',
-      descriptionKey: 'PROJECTS.POKEDEX',
+      imgSrc: 'videoflix.png',
+      title: 'Videoflix',
+      technologies: 'Angular | JavaScript | HTML | CSS | Django | Python | Redis | PostgreSQL',
+      descriptionKey: 'PROJECTS.VIDEOFLIX',
 
-      liveTestLink: 'https://pokedex.igor-stoleski.de/',
-      githubLink: 'https://github.com/IgorStoleski/pokedex',
+      liveTestLink: 'https://video-flix.de/',
+      githubLink: 'https://github.com/IgorStoleski/videoflix_backend',
     }
   ];
 
