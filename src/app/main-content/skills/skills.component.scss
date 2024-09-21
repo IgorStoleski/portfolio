@@ -261,6 +261,9 @@ section {
   .skill-icon-container .skill-container-section {
     width: 310px;
     gap: 20px;
+    .skill-icons {
+      height: 95px;
+    }
   }
   .myskill-container .myskill-container-info .skill-headline > h2 {
     font-size: 37px;

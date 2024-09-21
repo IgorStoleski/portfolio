@@ -6,6 +6,7 @@ section {
   width: 100%;
   margin-bottom: 150px;
   overflow: hidden;
+  gap: 40px;
 }
 
 .project-img {
@@ -19,7 +20,6 @@ section {
 .project-info-container {
   @include dFlex(flex-end, flex-start);
   flex-direction: column;
-  height: 340px;
   gap: 35px;
 }
 

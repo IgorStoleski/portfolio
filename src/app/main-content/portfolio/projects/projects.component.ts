@@ -17,11 +17,11 @@ export class ProjectsComponent {
     {
       imgSrc: 'join2.png',
       title: 'Join',
-      technologies: 'JavaScript | HTML | CSS',
+      technologies: 'JavaScript | HTML | CSS | Django | Python',
       descriptionKey: 'PROJECTS.JOIN',
 
-      liveTestLink: 'https://join.igor-stoleski.de/',
-      githubLink: 'https://github.com/IgorStoleski/join',
+      liveTestLink: 'https://kanban-join.de/',
+      githubLink: 'https://github.com/IgorStoleski/join_frontend',
     },
     {
       imgSrc: 'epl.png',
